@@ -87,6 +87,7 @@ Lists all the packages used in the project and their versions. Detailed instruct
 #### Additional Dependencies
 
 - **R**: Ensure R is installed and accessible. You can install R via your package manager or from the [CRAN website](https://cran.r-project.org/).
+- **Python**: Ensure Python is installed. You can install Python from the [official website](https://www.python.org/).
 
 ### Script Files
 
@@ -135,4 +136,4 @@ Links to websites and GitHub pages associated with the tools/software used in th
 
 ### Credits and Acknowledgments
 
-This project is the result of a collaborative effort, with each team member c
+This project was conducted and coded by Yasmine Alqanai (myself), with guidance and support from my supervisor, James McInerney.
