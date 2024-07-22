@@ -21,10 +21,6 @@ This document outlines the workflow timeline for the project, which aims to unde
 - Identification of genes associated with specific traits, particularly CRISPR systems.
 - Functional insights into significant genes through COG and GO annotations.
 
-### Package Installation
-
-Lists all the packages used in the project and their versions. Detailed instructions for installing each package are provided, ensuring that users can set up their environment correctly.
-
 ## Package Versions Needed
 
 ### Bioinformatics Tools
@@ -32,39 +28,39 @@ Lists all the packages used in the project and their versions. Detailed instruct
 - **BUSCO:** version 5.7.1
   - **Dependencies:**
     - Python 3.8
-    - Augustus 
-    - HMMER 
-    - NCBI BLAST+ 
+    - Augustus
+    - HMMER
+    - NCBI BLAST+
 
 - **Prokka:** version 1.14.6
   - **Dependencies:**
-    - BioPerl 
-    - Prodigal 
-    - Aragorn 
-    - RNAmmer 
-    - SignalP 
-    - Infernal 
+    - BioPerl
+    - Prodigal
+    - Aragorn
+    - RNAmmer
+    - SignalP
+    - Infernal
 
 - **Roary:** version 3.13
   - **Dependencies:**
-    - CD-HIT 
-    - PRANK 
-    - FastTree 
-    - MCL 
-    - Parallel 
+    - CD-HIT
+    - PRANK
+    - FastTree
+    - MCL
+    - Parallel
 
 - **Scoary:** version 1.6.16
   - **Dependencies:**
     - Python 3.8
-    - SciPy 
-    - NumPy 
-    - pandas 
-    - statsmodels 
+    - SciPy
+    - NumPy
+    - pandas
+    - statsmodels
 
 - **eggNOG-mapper:** version 2.1.12
   - **Dependencies:**
-    - Diamond 
-    - HMMER 
+    - Diamond
+    - HMMER
 
 - **EMBOSS:** version 6.6
   - **Dependencies:**
@@ -80,10 +76,10 @@ Lists all the packages used in the project and their versions. Detailed instruct
 
 - **R:** version 4.2.1
   - **Dependencies:**
-    - ggplot2 
-    - dplyr 
+    - ggplot2
+    - dplyr
+    - tidyr
     - topGO
-      
 ### Conda Installation
 
 1. **Download and install Miniconda**:
@@ -469,6 +465,54 @@ Use topGO to perform GO enrichment analysis in R.
 
 
 ### Supplementary Figures
+
+### Supplementary Figure 1: Filtering and Visualization of Scoary Results
+
+**Dependencies**:
+- Python 3.11.3
+- pandas
+- R
+- dplyr
+- tidyr
+- ggplot2
+
+**Input**:
+- `/scoary_25_1.4_output_new/CRISPR_Presence_30_06_2024_1908.results.csv`
+
+**Output**:
+- `filtered_data_1.4_new.csv`
+- `Filtered_P_Values_Comparison.png`
+
+**Scripts**:
+- **Python Script**: `filter_scoary_results.py`
+  - **Description**: This script filters out rows where the 'gene' column contains 'group_' and saves the filtered data to a new CSV file.
+- **R Script**: `compare_p_values.R`
+  - **Description**: This script compares the p-values of Bonferroni_p vs Benjamini_H_p from Scoary results for better visualization.
+
+### Supplementary Figure 2: Number of Genes Associated with Each GO Term
+
+**Dependencies**:
+- R
+- dplyr
+- ggplot2
+- tidyr
+
+**Input**:
+- `~/Desktop/grouped_genes_by_go.csv`
+- `~/Desktop/filtered_data_1.4_new.csv`
+- `~/Desktop/eggnog_output/eggnog_results.emapper.annotations`
+- `~/Desktop/go_enrichment_results.csv`
+
+**Output**:
+- `GO_Term_Gene_Count.png`
+
+**Scripts**:
+
+- **Script**: `group_genes_by_go.R`
+  - **Description**: Groups significant genes (346) to their associated GO terms and saves the grouped data to a CSV file.
+
+- **Script**: `go_term_gene_count_plot.R`
+  - **Description**: Calculates the number of genes associated with each GO term and plots a bar chart showing the number of genes per GO term.
 
 
 
