@@ -245,38 +245,47 @@ Use the `roary_bar_chart.R` script to make the graph in Figure 1. This script ge
 ### Figure 2: Roary Accessory Binary Genes Tree
 Use the `plot_roary.py` script to make the graph in Figure 2. This script is part of the Roary plots package, which is developed and maintained by the EMBL-European Bioinformatics Institute.
 
-#### How to Use `plot_roary.py`
+### How to Use `plot_roary.py`
 
-**Dependencies**:
+#### Dependencies:
+
 - Python
 - matplotlib
 - pandas
-- seaborn
+- biopython
 
-**Input**:
+#### Input:
+
 - `roary_25_1.4_1719619195/accessory_binary_genes.fa.newick`
 - `roary_25_1.4_1719619195/gene_presence_absence.csv`
 
-**Output**:
+#### Output:
+
 - `accessory_binary_genes_tree.png`
 
-1. Download the script from the official repository:
+#### Steps:
+
+1. **Download the script from the official repository**:
 
     ```sh
     wget https://raw.githubusercontent.com/sanger-pathogens/Roary/master/contrib/roary_plots/roary_plots.py
     ```
 
-2. Ensure you have the required dependencies installed:
+2. **Ensure you have the required dependencies installed**:
 
     ```sh
-    pip install matplotlib pandas seaborn
+    pip install matplotlib pandas biopython
     ```
 
-3. Run the script to generate the plots:
+3. **Save the `plot_roary.py` script locally**
+
+
+4. **Run the script to generate the plots**:
 
     ```sh
-    python roary_plots.py roary_25_1.4_1719619195/accessory_binary_genes.fa.newick roary_25_1.4_1719619195/gene_presence_absence.csv
+    python plot_roary.py roary_25_1.4_1719619195/accessory_binary_genes.fa.newick roary_25_1.4_1719619195/gene_presence_absence.csv accessory_binary_genes_tree.png
     ```
+
 
 #### License and Attribution
 This script is distributed under the GNU General Public License v3.0. You can redistribute it and/or modify it under the terms of the GPL as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. The script is provided without any warranty; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
