@@ -93,9 +93,18 @@ Lists all the packages used in the project and their versions. Detailed instruct
 
 Lists the scripts used and where to find them. Links are provided to locate the scripts if not provided on this page.
 
-#### Quality Check with BUSCO
+### Quality Check with BUSCO
 
-- **Script**: `run_busco.sh`
+## CRISPR Genomes
+
+- **Script**: `run_busco_CRISPR.sh`
+
+## Non-CRISPR Genomes
+
+- **Script**: `run_busco_NONCRISPR.sh`
+
+**Note:** Increase the `START_INDEX` and `END_INDEX` values in the scripts until all directories are processed. This ensures that all genome files are analyzed in batches.
+
 
 #### Genome Annotation with Prokka
 
