@@ -54,7 +54,7 @@ This document outlines the workflow timeline for the project, which aims to unde
 
 ### steps taken and files used
 
-###Find Genomes using CRISPRCasFinder
+### Find Genomes using CRISPRCasFinder
 
 Use CRISPRCasFinder to identify genomes with CRISPR systems.
 
