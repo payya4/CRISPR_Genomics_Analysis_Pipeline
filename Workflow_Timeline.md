@@ -257,4 +257,10 @@ After running eggNOG-mapper, use the `extract_cog_annotations.py` and `extract_g
 - The input files should be in the correct format and located in the specified directories.
 - The extraction scripts should be run in sequence to ensure that all necessary data is processed correctly.
 
+## Visualization
+
+-Use the `roary_bar_chart.R` script to make the graph in Figure 1.
+
+
+
 
