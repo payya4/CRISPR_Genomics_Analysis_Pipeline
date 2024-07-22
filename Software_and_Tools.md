@@ -1,6 +1,8 @@
+# Software_and_Tools.md
+
 ## File Details
 
-This file provides details about the software, tools, and websites utilized in our step-by-step process. For websites, it includes URLs and the dates accessed. For R/Python tools and applications, it lists the version data corresponding to the versions used, outlined below.
+This file provides details about the software, tools, and websites utilized in our step-by-step process. For websites, it includes URLs and the dates accessed. For Python/R tools and applications, it lists the version data corresponding to the versions used, outlined below.
 
 ## Packages
 
@@ -97,6 +99,10 @@ This file provides details about the software, tools, and websites utilized in o
 - **R** - Version 4.2.1
   - **Dependencies**: ggplot2, dplyr, tidyr, topGO
   - [R Project Website](https://www.r-project.org)
+
+### Terminal Version:
+
+- **Terminal** - Version 2.12.7
 
 ### Conda Installation:
 
