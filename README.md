@@ -22,49 +22,34 @@ Results such as:
 - Core/accessory genome definitions
 - Functional insights
 
-### Package Installation
+## Tools and Packages
 
-- **BUSCO**: version 5.7.1
-  - **Dependencies**: 
-    - Python 3.11.3
-    - Augustus 3.5.0
-    - HMMER 3.1b2
-    - NCBI BLAST+ 2.15.0 
-- **Prokka**: version 1.14.6
-  - **Dependencies**: 
-    - BioPerl 1.7.8
-    - Prodigal 2.6.3
-    - Aragorn 1.2.41
-    - Infernal 1.1.5 
-- **Roary**: version 3.13
-- **Scoary**: version 1.6.16
-  - **Dependencies**: 
-    - Python 3.11.3
-    - SciPy 1.10.1
-    - NumPy 1.24.4
-    - pandas terminal home look
-    - matplotlib
+### Tools
+- **CRISPRCasFinder**
+- **Miniconda**
+- **pip**
 
-- **eggNOG-mapper**: version 2.1.12
-  - **Dependencies**: 
-    - Diamond
-    - HMMER
-- **EMBOSS**: version 6.6
-  - **Dependencies**: 
-    - libxpm4
-    - libpng16-16
-    - libgd3
-- **Python**: version 3.11.3
-  - **Dependencies**: 
-    - pip (or latest available at the time of installation)
-- **R**: version 4.3.1
-  - **Dependencies**: 
-    - ggplot2 3.5.1
-    - dplyr 1.1.4
-    - tidyr 1.3.1
-    - topGO 2.54.0
-- **Miniconda**: latest version
-- **pip**: latest version
+### Packages
+- **BUSCO** V5.7.1
+- **Prokka** V1.14.6
+- **Roary** V3.13
+- **Scoary** V1.6.16
+- **eggNOG-mapper** V2.1.12
+- **EMBOSS** V6.6
+- **Python** V3.11.3
+  - **Packages**:
+    - **pandas** 
+    - **biopython** 
+    - **bcbio-gff**
+    - **matplotlib**
+    - **SciPy** V1.10.1
+    - **NumPy** V1.24.4
+- **R** V4.3.1
+  - **Packages**:
+    - **ggplot2** V3.5.1
+    - **dplyr** V1.1.4
+    - **tidyr** V1.3.1
+    - **topGO** V2.54.0
 
 
 ### Script Files
