@@ -25,23 +25,54 @@ Results such as:
 ### Package Installation
 
 - **BUSCO**: version 5.7.1
-  - **Dependencies**: Python 3.8, Augustus, HMMER, NCBI BLAST+
+  - **Dependencies**: 
+    - Python 3.8
+    - Augustus
+    - HMMER
+    - NCBI BLAST+
 - **Prokka**: version 1.14.6
-  - **Dependencies**: BioPerl, Prodigal, Aragorn, RNAmmer, SignalP, Infernal
+  - **Dependencies**: 
+    - BioPerl
+    - Prodigal
+    - Aragorn
+    - RNAmmer
+    - SignalP
+    - Infernal
 - **Roary**: version 3.13
-  - **Dependencies**: CD-HIT, PRANK, FastTree, MCL, Parallel
+  - **Dependencies**: 
+    - CD-HIT
+    - PRANK
+    - FastTree
+    - MCL
+    - Parallel
 - **Scoary**: version 1.6.16
-  - **Dependencies**: Python 3.8, SciPy, NumPy, pandas, statsmodels
+  - **Dependencies**: 
+    - Python 3.8
+    - SciPy
+    - NumPy
+    - pandas
+    - statsmodels
 - **eggNOG-mapper**: version 2.1.12
-  - **Dependencies**: Diamond, HMMER
+  - **Dependencies**: 
+    - Diamond
+    - HMMER
 - **EMBOSS**: version 6.6
-  - **Dependencies**: libxpm4, libpng16-16, libgd3
+  - **Dependencies**: 
+    - libxpm4
+    - libpng16-16
+    - libgd3
 - **Python**: version 3.8
-  - **Dependencies**: pip (or latest available at the time of installation)
+  - **Dependencies**: 
+    - pip (or latest available at the time of installation)
 - **R**: version 4.2.1
-  - **Dependencies**: ggplot2, dplyr, topGO
+  - **Dependencies**: 
+    - ggplot2
+    - dplyr
+    - tidyr
+    - topGO
 - **Miniconda**: latest version
 - **pip**: latest version
+
 
 ### Script Files
 
