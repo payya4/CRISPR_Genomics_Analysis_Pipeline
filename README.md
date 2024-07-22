@@ -27,31 +27,24 @@ Results such as:
 - **BUSCO**: version 5.7.1
   - **Dependencies**: 
     - Python 3.11.3
-    - Augustus
-    - HMMER
-    - NCBI BLAST+
+    - Augustus 3.5.0
+    - HMMER 3.1b2
+    - NCBI BLAST+ 2.15.0 
 - **Prokka**: version 1.14.6
   - **Dependencies**: 
-    - BioPerl 
+    - BioPerl 1.7.8
     - Prodigal 2.6.3
     - Aragorn 1.2.41
-    - RNAmmer 
-    - SignalP 
-    - Infernal
+    - Infernal 1.1.5 
 - **Roary**: version 3.13
-  - **Dependencies**: 
-    - CD-HIT
-    - PRANK
-    - FastTree
-    - MCL
-    - Parallel
 - **Scoary**: version 1.6.16
   - **Dependencies**: 
     - Python 3.11.3
-    - SciPy 1.5.4
-    - NumPy 1.19.5
-    - pandas 1.1.5
-    - statsmodels
+    - SciPy 1.10.1
+    - NumPy 1.24.4
+    - pandas terminal home look
+    - matplotlib
+
 - **eggNOG-mapper**: version 2.1.12
   - **Dependencies**: 
     - Diamond
