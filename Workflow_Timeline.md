@@ -435,7 +435,7 @@ Use topGO to perform GO enrichment analysis in R.
 - **Script**: `visualize_cogs.py`
 - **Description**: This script generates visualizations of the COG category counts and significant COG categories using matplotlib.
 
-### R Script for Visualization of GO Enrichment
+### Figure 5: R Script for Visualization of GO Enrichment
 
 **Dependencies**:
 - R
