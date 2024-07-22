@@ -190,6 +190,63 @@ Lists the scripts used and where to find them. Links are provided to locate the 
 - Ensure all GFF files from Prokka are prepared and stored in the specified directory.
 - Run the script `run_roary.sh` to perform the pan-genome analysis with the chosen parameters.
 
+### Figure 1: Distribution of Gene Categories
+Use the `roary_bar_chart.R` script to make the graph in Figure 1. This script generates a bar chart showing the distribution of gene categories (Core genes, Soft core genes, Shell genes, Cloud genes) with a log scale on the y-axis.
+
+**Dependencies**:
+- R
+- ggplot2
+- dplyr
+
+**Input**: 
+- None (data is hardcoded within the script)
+
+**Output**:
+- `gene_category_distribution.png`
+
+### Figure 2: Roary Accessory Binary Genes Tree
+Use the `plot_roary.py` script to make the graph in Figure 2. This script is part of the Roary plots package, which is developed and maintained by the EMBL-European Bioinformatics Institute.
+
+#### How to Use `plot_roary.py`
+
+**Dependencies**:
+- Python
+- matplotlib
+- pandas
+- seaborn
+
+**Input**:
+- `roary_25_1.4_1719619195/accessory_binary_genes.fa.newick`
+- `roary_25_1.4_1719619195/gene_presence_absence.csv`
+
+**Output**:
+- `accessory_binary_genes_tree.png`
+
+1. Download the script from the official repository:
+
+    ```sh
+    wget https://raw.githubusercontent.com/sanger-pathogens/Roary/master/contrib/roary_plots/roary_plots.py
+    ```
+
+2. Ensure you have the required dependencies installed:
+
+    ```sh
+    pip install matplotlib pandas seaborn
+    ```
+
+3. Run the script to generate the plots:
+
+    ```sh
+    python roary_plots.py roary_25_1.4_1719619195/accessory_binary_genes.fa.newick roary_25_1.4_1719619195/gene_presence_absence.csv
+    ```
+
+#### License and Attribution
+This script is distributed under the GNU General Public License v3.0. You can redistribute it and/or modify it under the terms of the GPL as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. The script is provided without any warranty; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+For any queries or permissions beyond the scope of the license, please contact the developers at <marco@ebi.ac.uk>.
+
+The original script and its documentation can be found [here](https://github.com/sanger-pathogens/Roary/blob/master/contrib/roary_plots/roary_plots.py).
+
 ## Genome-Wide Association Study with Scoary
 
 ### Scripts Used
@@ -250,74 +307,78 @@ Use the `run_eggnog_mapper.sh` script to run eggNOG-mapper on the translated pro
 ## Extract COG and GO Annotations
 
 After running eggNOG-mapper, use the `extract_cog_annotations.py` and `extract_go_annotations.py` scripts to extract COG and GO annotations from the eggNOG-mapper output. The SLURM batch script `run_extract_annotations.sh` is used to run the extraction scripts.
+# Gene Annotation and Enrichment Analysis Workflow
 
-## Notes
+## Run eggNOG-mapper
 
-- Ensure the conda environment `eggnog_env` is correctly set up and activated before running eggNOG-mapper.
-- The input files should be in the correct format and located in the specified directories.
-- The extraction scripts should be run in sequence to ensure that all necessary data is processed correctly.
+Use the `run_eggnog_mapper.sh` script to run eggNOG-mapper on the translated protein sequences. This script activates the necessary conda environment (`eggnog_env`) and runs eggNOG-mapper with the specified input and output directories.
 
-## Visualization
+## Extract COG and GO Annotations
 
-### Figure 1: Distribution of Gene Categories
-Use the `roary_bar_chart.R` script to make the graph in Figure 1. This script generates a bar chart showing the distribution of gene categories (Core genes, Soft core genes, Shell genes, Cloud genes) with a log scale on the y-axis.
+After running eggNOG-mapper, use the `extract_cog_annotations.py` and `extract_go_annotations.py` scripts to extract COG and GO annotations from the eggNOG-mapper output. The SLURM batch script `run_extract_annotations.sh` is used to run the extraction scripts.
 
-**Dependencies**:
-- R
-- ggplot2
-- dplyr
+### Python Script to Extract COG Annotations
 
-**Input**: 
-- None (data is hardcoded within the script)
+- **Script**: `extract_cog_annotations.py`
+- **Description**: This script reads the eggNOG-mapper annotations file and extracts the COG annotations for each gene, saving the results to a file.
 
-**Output**:
-- `gene_category_distribution.png`
+### Python Script to Extract GO Annotations
 
-### Figure 2: Roary Accessory Binary Genes Tree
-Use the `plot_roary.py` script to make the graph in Figure 2. This script is part of the Roary plots package, which is developed and maintained by the EMBL-European Bioinformatics Institute.
+- **Script**: `extract_go_annotations.py`
+- **Description**: This script reads the eggNOG-mapper annotations file and extracts the GO annotations for each gene, saving the results to a file.
 
-#### How to Use `plot_roary.py`
+### SLURM Batch Script to Run the Python Scripts
 
-**Dependencies**:
-- Python
-- matplotlib
-- pandas
-- seaborn
+- **Script**: `run_extract_annotations.sh`
+- **Description**: This SLURM script is used to run the `extract_cog_annotations.py` and `extract_go_annotations.py` scripts on a computing cluster.
 
-**Input**:
-- `roary_25_1.4_1719619195/accessory_binary_genes.fa.newick`
-- `roary_25_1.4_1719619195/gene_presence_absence.csv`
+## Categorize Genes
 
-**Output**:
-- `accessory_binary_genes_tree.png`
+### Python Script to Categorize Genes
 
-1. Download the script from the official repository:
+- **Script**: `categorize_genes.py`
+- **Description**: This script parses GFF files, matches gene names against significant genes, and collects the corresponding gene IDs. The script differentiates between CRISPR and non-CRISPR strains and saves the gene IDs to separate files.
 
-    ```sh
-    wget https://raw.githubusercontent.com/sanger-pathogens/Roary/master/contrib/roary_plots/roary_plots.py
-    ```
+## Enrichment Analysis for COGs
 
-2. Ensure you have the required dependencies installed:
+### Combine Gene IDs
 
-    ```sh
-    pip install matplotlib pandas seaborn
-    ```
+- **Command**: `cat ~/output_crispr_genes.txt ~/output_non_crispr_genes.txt > ~/combined_gene_ids.txt`
+- **Description**: This command concatenates the CRISPR and non-CRISPR gene ID files into a single file for combined analysis.
 
-3. Run the script to generate the plots:
+### Python Script for COG Enrichment Analysis
 
-    ```sh
-    python roary_plots.py roary_25_1.4_1719619195/accessory_binary_genes.fa.newick roary_25_1.4_1719619195/gene_presence_absence.csv
-    ```
+- **Script**: `cog_enrichment_analysis_combined.py`
+- **Description**: This script performs COG enrichment analysis on the combined gene IDs using Fisher's exact test and adjusts p-values for multiple testing. Significant COG categories are identified and saved to a file.
 
-#### License and Attribution
-This script is distributed under the GNU General Public License v3.0. You can redistribute it and/or modify it under the terms of the GPL as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. The script is provided without any warranty; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#### Combined Analysis
 
-For any queries or permissions beyond the scope of the license, please contact the developers at <marco@ebi.ac.uk>.
+In the combined analysis of CRISPR and non-CRISPR genes, two significant COG categories were identified:
 
-The original script and its documentation can be found [here](https://github.com/sanger-pathogens/Roary/blob/master/contrib/roary_plots/roary_plots.py).
+- `MU`: Adjusted p-value = 0.020681
+- `TZ`: Adjusted p-value = 0.041364
+
+
+## GO Enrichment Analysis
+
+Use topGO to perform GO enrichment analysis in R.
+
+### Conda Environment Activation
+
+- **Command**: `conda activate scoary_analysis`
+- **Description**: Activate the conda environment used for the analysis.
+
+### Python Script to Correct `gene2go.map`
+
+- **Script**: `correct_gene2go.py`
+- **Description**: This script corrects the `gene2go.map` file by replacing semicolons with commas and removing the `_1` suffix from gene IDs.
+
+### R Script for GO Enrichment Analysis
+
+- **Script**: `go_enrichment_analysis.R`
+- **Description**: This R script uses the topGO package to perform GO enrichment analysis on the corrected `gene2go.map` file. It generates a results table and saves it to a CSV file.
 
 ### Figures 3 and 4: COG Category Counts and Significant COG Categories
-Use the `cogs_graphs.R` script to make the graphs in Figures 3 and 4. These scripts generate bar charts for COG category counts and significant COG categories with adjusted p-values.
 
 **Dependencies**:
 - R
@@ -332,8 +393,11 @@ Use the `cogs_graphs.R` script to make the graphs in Figures 3 and 4. These scri
 - `~/Desktop/eggnog_output/cog_category_counts_filtered.png`
 - `~/Desktop/eggnog_output/significant_cog_categories_filtered.png`
 
-### Figure 5: Top GO Terms Enriched in Significant Genes
-Use the `go_graphs.R` script to make the graph in Figure 5. This script generates a bar chart of the top Gene Ontology (GO) terms enriched in significant genes, with custom labels for clarity.
+
+- **Script**: `visualize_cogs.py`
+- **Description**: This script generates visualizations of the COG category counts and significant COG categories using matplotlib.
+
+### R Script for Visualization of GO Enrichment
 
 **Dependencies**:
 - R
@@ -345,6 +409,17 @@ Use the `go_graphs.R` script to make the graph in Figure 5. This script generate
 
 **Output**:
 - `~/Desktop/top_go_terms_enriched.png`
+
+- **Script**: `visualize_go_enrichment.R`
+- **Description**: This script generates a bar chart of the top GO terms enriched in significant genes using ggplot2.
+
+## Notes
+
+- Ensure the conda environment `eggnog_env` is correctly set up and activated before running eggNOG-mapper.
+- The input files should be in the correct format and located in the specified directories.
+- The extraction scripts should be run in sequence to ensure that all necessary data is processed correctly.
+
+
 
 ### Supplementary Figures
 
