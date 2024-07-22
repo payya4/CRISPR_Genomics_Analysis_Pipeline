@@ -1,27 +1,50 @@
-# CRISPR_Genomics_Analysis_Pipeline
-This repository includes the code and steps required to conduct the CRISPR genomics project.
+# Workflow_Timeline.md
 
-## Contents of the Files
+## Introduction
 
-### Workflow_Timeline.md
+This document outlines the workflow timeline for the project, which aims to understand the co-occurrence of horizontally transferred genes and CRISPR genes within prokaryotic pangenomes. The analysis aims to uncover the mechanisms driving bacterial adaptation and survival in dynamic environments.
 
-#### Introduction
-Provides a brief overview of the problem being addressed and the importance of CRISPR-related research.
+## Objectives
 
-#### Objectives
-Outlines the goals of the analysis, including:
-- Quality check with BUSCO
-- Genome annotation with Prokka
-- Pan-genome analysis with Roary
-- Genome-wide association studies with Scoary
-- COG and GO enrichment analysis with eggNOG-mapper
+- To assess the quality of genomes using BUSCO.
+- To annotate high-quality genomes with Prokka.
+- To perform pan-genome analysis using Roary.
+- To conduct genome-wide association studies (GWAS) with Scoary.
+- To functionally annotate genes with eggNOG-mapper.
+- To identify key genes associated with CRISPR systems and elucidate their functional roles.
 
-#### Expected Outcomes
-Describes the anticipated results of the project, such as identifying core and accessory genes, significant genetic variations associated with phenotypic traits, and enriched functional categories.
+## Expected Outcomes
+
+- Identification of high-quality genomes with over 90% completeness.
+- Comprehensive genome annotations.
+- Definition of core and accessory genomes in the studied strains.
+- Identification of genes associated with specific traits, particularly CRISPR systems.
+- Functional insights into significant genes through COG and GO annotations.
 
 ### Package Installation
 
 Lists all the packages used in the project and their versions. Detailed instructions for installing each package are provided, ensuring that users can set up their environment correctly.
+
+# Package Versions Needed
+
+## Bioinformatics Tools
+
+- **BUSCO:** version 5.7.1
+- **Prokka:** version 1.14.6
+- **Roary:** version 3.13
+- **Scoary:** version 1.6.16
+- **eggNOG-mapper:** version 2.1.12
+- **EMBOSS:** version 6.6
+
+## Programming Languages and Environments
+
+- **Python:** version 3.8
+- **R:** version 4.2.1
+
+## Additional Dependencies
+
+- **Miniconda:** latest version (installation script available)
+- **pip:** latest version (used for Scoary installation)
 
 #### Conda Installation
 
