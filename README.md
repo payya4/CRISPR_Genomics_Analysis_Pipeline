@@ -151,9 +151,33 @@ Lists the scripts used and where to find them. Links are provided to locate the 
 - Run the script `run_roary.sh` to perform the pan-genome analysis with the chosen parameters.
 
 
-#### Genome-wide Association Studies with Scoary
+### Genome-Wide Association Study with Scoary
 
-- **Script**: `run_scoary.sh`
+#### Scripts Used
+- **Scoary Script**: `run_scoary.sh`
+- **Traits File Creation**: `create_traits_file.R`
+
+#### Traits File Creation
+The traits file contains the genome identifiers and a binary indicator of CRISPR presence (1 for presence, 0 for absence). This file is used by Scoary to associate gene presence/absence with traits.
+
+Refer to the `create_traits_file.R` script for details on creating the traits file.
+
+#### Running Scoary
+To perform the genome-wide association study with Scoary, use the `run_scoary.sh` script. This script activates the necessary conda environment, defines the input and output directories, and runs Scoary with the appropriate parameters.
+
+Ensure you have the following files:
+- `gene_presence_absence.csv` from Roary
+- `traits_file.csv` created as described above
+
+Place these files in the specified directories and execute the `run_scoary.sh` script to perform the analysis.
+
+#### Results Overview
+- The Scoary analysis associates the presence or absence of genes with the presence of CRISPR systems.
+- Significant genes identified through this analysis can provide insights into the genetic basis of CRISPR presence.
+
+#### Running the Analysis
+- Ensure all necessary input files (`gene_presence_absence.csv` from Roary and `traits_file.csv`) are prepared and located in the specified directories.
+- Execute the `run_scoary.sh` script to perform the association study.
 
 #### COG and GO Enrichment Analysis with eggNOG-mapper
 
