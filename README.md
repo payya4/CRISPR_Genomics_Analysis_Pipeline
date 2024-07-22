@@ -32,11 +32,11 @@ Results such as:
     - NCBI BLAST+
 - **Prokka**: version 1.14.6
   - **Dependencies**: 
-    - BioPerl
-    - Prodigal
-    - Aragorn
-    - RNAmmer
-    - SignalP
+    - BioPerl 
+    - Prodigal 2.6.3
+    - Aragorn 1.2.41
+    - RNAmmer 
+    - SignalP 
     - Infernal
 - **Roary**: version 3.13
   - **Dependencies**: 
