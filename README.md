@@ -25,7 +25,7 @@ Results such as:
 ## Tools and Packages
 
 ### Tools
-- **Miniconda** 24.5.0
+- **Miniconda** V24.5.0
 - **pip** V9.0.3
 - **Terminal**: 
   - **Bash**: V4.4.20
