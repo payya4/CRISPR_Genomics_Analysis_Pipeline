@@ -106,12 +106,12 @@ Lists the scripts used and where to find them. Links are provided to locate the 
 **Note:** Increase the `START_INDEX` and `END_INDEX` values in the scripts until all directories are processed. This ensures that all genome files are analyzed in batches.
 
 
-#### Genome Annotation with Prokka
+## Genome Annotation with Prokka
 
 - **CRISPR Genomes**: `annotate_genomes_crispr.sh`
 - **Non-CRISPR Genomes**: `annotate_genomes_noncrispr.sh`
 
-### Pan-Genome Analysis with Roary
+## Pan-Genome Analysis with Roary
 
 #### Script Used
 - **Roary Script**: `run_roary.sh`
@@ -151,7 +151,7 @@ Lists the scripts used and where to find them. Links are provided to locate the 
 - Run the script `run_roary.sh` to perform the pan-genome analysis with the chosen parameters.
 
 
-### Genome-Wide Association Study with Scoary
+## Genome-Wide Association Study with Scoary
 
 #### Scripts Used
 - **Scoary Script**: `run_scoary.sh`
