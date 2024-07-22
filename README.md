@@ -28,7 +28,7 @@ Results such as:
 - **Miniconda** 24.5.0
 - **pip** V9.0.3
 - **Terminal**: 
-  - **Bash**: 4.4.20
+  - **Bash**: V4.4.20
 
 ### Packages
 - **BUSCO** V5.7.1
