@@ -93,13 +93,13 @@ Lists all the packages used in the project and their versions. Detailed instruct
 
 Lists the scripts used and where to find them. Links are provided to locate the scripts if not provided on this page.
 
-### Quality Check with BUSCO
+## Quality Check with BUSCO
 
-## CRISPR Genomes
+### CRISPR Genomes
 
 - **Script**: `run_busco_CRISPR.sh`
 
-## Non-CRISPR Genomes
+### Non-CRISPR Genomes
 
 - **Script**: `run_busco_NONCRISPR.sh`
 
