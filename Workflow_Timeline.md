@@ -52,7 +52,13 @@ This document outlines the workflow timeline for the project, which aims to unde
     - **topGO** V2.54.0
 
 
-### Script Files
+### steps taken and files used
+
+###Find Genomes using CRISPRCasFinder
+
+Use CRISPRCasFinder to identify genomes with CRISPR systems.
+
+**Website**: https://crisprcas.i2bc.paris-saclay.fr/MainDb/StrainList
 
 ## Quality Check with BUSCO
 
