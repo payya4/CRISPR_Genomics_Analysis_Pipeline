@@ -27,7 +27,7 @@ Results such as:
 ### Tools
 - **CRISPRCasFinder**
 - **Miniconda**
-- **pip**
+- **pip** V9.0.3
 
 ### Packages
 - **BUSCO** V5.7.1
@@ -38,10 +38,10 @@ Results such as:
 - **EMBOSS** V6.6
 - **Python** V3.11.3
   - **Packages**:
-    - **pandas** 
-    - **biopython** 
-    - **bcbio-gff**
-    - **matplotlib**
+    - **pandas** V1.1.5
+    - **biopython** V1.79
+    - **bcbio-gff** V0.7.1 
+    - **matplotlib** V3.9.0
     - **SciPy** V1.10.1
     - **NumPy** V1.24.4
 - **R** V4.3.1
