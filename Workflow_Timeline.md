@@ -21,37 +21,38 @@ This document outlines the workflow timeline for the project, which aims to unde
 - Identification of genes associated with specific traits, particularly CRISPR systems.
 - Functional insights into significant genes through COG and GO annotations.
 
-## Package Versions Needed
+## Tools and Packages
 
 ### Tools
-- **CRISPRCasFinder**
-- **Miniconda**
+- **Miniconda** V24.5.0
+- **pip** V9.0.3
+- **Terminal**: 
+  - **Bash**: V4.4.20
 
 ### Packages
-- **BUSCO**
-- **Prokka**
-- **Roary**
-- **Scoary**
-- **eggNOG-mapper**
-- **EMBOSS**
-- **Python**
+- **BUSCO** V5.7.1
+- **Prokka** V1.14.6
+- **Roary** V3.13
+- **Scoary** V1.6.16
+- **eggNOG-mapper** V2.1.12
+- **EMBOSS** V6.6
+- **Python** V3.11.3
   - **Packages**:
-    - **pandas**
-    - **biopython**
-    - **bcbio-gff**
-    - **matplotlib**
-    - **SciPy**
-    - **NumPy**
-- **R**
+    - **pandas** V1.1.5
+    - **biopython** V1.79
+    - **bcbio-gff** V0.7.1 
+    - **matplotlib** V3.9.0
+    - **SciPy** V1.10.1
+    - **NumPy** V1.24.4
+- **R** V4.3.1
   - **Packages**:
-    - **ggplot2**
-    - **dplyr**
-    - **tidyr**
-    - **topGO**
+    - **ggplot2** V3.5.1
+    - **dplyr** V1.1.4
+    - **tidyr** V1.3.1
+    - **topGO** V2.54.0
+
 
 ### Script Files
-
-Lists the scripts used and where to find them. Links are provided to locate the scripts if not provided on this page.
 
 ## Quality Check with BUSCO
 
@@ -67,7 +68,7 @@ Lists the scripts used and where to find them. Links are provided to locate the 
 - **Input Files**: Genome FASTA files (.fna)
 - **Output Files**: BUSCO completeness reports
 
-**Note:** Increase the `START_INDEX` and `END_INDEX` values in the scripts until all directories are processed. This ensures that all genome files are analyzed in batches.
+**Note:** Increase the `START_INDEX` and `END_INDEX` values in the scripts until all directories are processed. This ensures that all genome files are analyzed in batches. Once done I filtered out the stains that were less than 90% complete.
 
 ## Genome Annotation with Prokka
 
