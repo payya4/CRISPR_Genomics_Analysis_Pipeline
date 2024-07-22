@@ -200,6 +200,38 @@ Results such as:
   - **Dependencies**: R, ggplot2, dplyr
   - **Input**: `~/Desktop/go_enrichment_results.csv`
   - **Output**: `~/Desktop/top_go_terms_enriched.png`
+ 
+### Supplementary Figures
+
+#### Supplementary Figure 1: Filtering and Visualization of Scoary Results
+
+*   **Script**: `filter_scoary_results.py`
+    *   **Purpose**: This script filters out rows where the 'gene' column contains 'group_' and saves the filtered data to a new CSV file.
+    *   **Dependencies**: Python 3.11.3, pandas
+    *   **Input**: `/scoary_25_1.4_output_new/CRISPR_Presence_30_06_2024_1908.results.csv`
+    *   **Output**: `filtered_data_1.4_new.csv`
+*   **Script**: `compare_p_values.R`
+    *   **Purpose**: This script compares the p-values of Bonferroni_p vs Benjamini_H_p from Scoary results for better visualization.
+    *   **Dependencies**: R, dplyr, tidyr, ggplot2
+    *   **Input**: `~/Desktop/filtered_data_1.4_new.csv`
+    *   **Output**: `Filtered_P_Values_Comparison.png`
+
+#### Supplementary Figure 2: Number of Genes Associated with Each GO Term
+
+*   **Script**: `group_genes_by_go.R`
+    *   **Purpose**: Groups significant genes to their associated GO terms and saves the grouped data to a CSV file.
+    *   **Dependencies**: R, dplyr, tidyr
+    *   **Input**:
+        *   `~/Desktop/filtered_data_1.4_new.csv`
+        *   `~/Desktop/eggnog_output/eggnog_results.emapper.annotations`
+        *   `~/Desktop/go_enrichment_results.csv`
+    *   **Output**: `~/Desktop/grouped_genes_by_go.csv`
+*   **Script**: `go_term_gene_count_plot.R`
+    *   **Purpose**: Calculates the number of genes associated with each GO term and plots a bar chart showing the number of genes per GO term.
+    *   **Dependencies**: R, ggplot2, dplyr
+    *   **Input**: `~/Desktop/grouped_genes_by_go.csv`
+    *   **Output**: `GO_Term_Gene_Count.png`
+
 
 ### Software_and_Tools.md
 
