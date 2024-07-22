@@ -23,63 +23,31 @@ This document outlines the workflow timeline for the project, which aims to unde
 
 ## Package Versions Needed
 
-### Bioinformatics Tools
+### Tools
+- **CRISPRCasFinder**
+- **Miniconda**
 
-- **BUSCO:** version 5.7.1
-  - **Dependencies:**
-    - Python 3.8
-    - Augustus
-    - HMMER
-    - NCBI BLAST+
-
-- **Prokka:** version 1.14.6
-  - **Dependencies:**
-    - BioPerl
-    - Prodigal
-    - Aragorn
-    - RNAmmer
-    - SignalP
-    - Infernal
-
-- **Roary:** version 3.13
-  - **Dependencies:**
-    - CD-HIT
-    - PRANK
-    - FastTree
-    - MCL
-    - Parallel
-
-- **Scoary:** version 1.6.16
-  - **Dependencies:**
-    - Python 3.8
-    - SciPy
-    - NumPy
-    - pandas
-    - statsmodels
-
-- **eggNOG-mapper:** version 2.1.12
-  - **Dependencies:**
-    - Diamond
-    - HMMER
-
-- **EMBOSS:** version 6.6
-  - **Dependencies:**
-    - libxpm4
-    - libpng16-16
-    - libgd3
-
-### Programming Languages and Environments
-
-- **Python:** version 3.8
-  - **Dependencies:**
-    - pip (or latest available at the time of installation)
-
-- **R:** version 4.2.1
-  - **Dependencies:**
-    - ggplot2
-    - dplyr
-    - tidyr
-    - topGO
+### Packages
+- **BUSCO**
+- **Prokka**
+- **Roary**
+- **Scoary**
+- **eggNOG-mapper**
+- **EMBOSS**
+- **Python**
+  - **Packages**:
+    - **pandas**
+    - **biopython**
+    - **bcbio-gff**
+    - **matplotlib**
+    - **SciPy**
+    - **NumPy**
+- **R**
+  - **Packages**:
+    - **ggplot2**
+    - **dplyr**
+    - **tidyr**
+    - **topGO**
 
 ### Script Files
 
