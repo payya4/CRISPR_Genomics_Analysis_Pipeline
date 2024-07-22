@@ -2,7 +2,7 @@
 
 ## Contents of the Files
 
-### Workflow_Timeline.md
+# Workflow_Timeline.md
 
 #### Introduction
 Overview of the analysis on horizontally transferred genes and CRISPR genes in prokaryotic pangenomes.
@@ -212,10 +212,10 @@ Results such as:
     *   **Output**: `GO_Term_Gene_Count.png`
 
 
-### Software_and_Tools.md
+# Software_and_Tools.md
 
 Provides usage and installation information for all tools and software used.
 
-### Credits and Acknowledgments
+# Credits and Acknowledgments
 
 Project conducted by Yasmine Alqanai, with guidance from supervisor James McInerney.
