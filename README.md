@@ -26,7 +26,7 @@ Results such as:
 
 - **BUSCO**: version 5.7.1
   - **Dependencies**: 
-    - Python 3.8
+    - Python 3.11.3
     - Augustus
     - HMMER
     - NCBI BLAST+
@@ -47,10 +47,10 @@ Results such as:
     - Parallel
 - **Scoary**: version 1.6.16
   - **Dependencies**: 
-    - Python 3.8
-    - SciPy
-    - NumPy
-    - pandas
+    - Python 3.11.3
+    - SciPy 1.5.4
+    - NumPy 1.19.5
+    - pandas 1.1.5
     - statsmodels
 - **eggNOG-mapper**: version 2.1.12
   - **Dependencies**: 
@@ -61,15 +61,15 @@ Results such as:
     - libxpm4
     - libpng16-16
     - libgd3
-- **Python**: version 3.8
+- **Python**: version 3.11.3
   - **Dependencies**: 
     - pip (or latest available at the time of installation)
-- **R**: version 4.2.1
+- **R**: version 4.3.1
   - **Dependencies**: 
-    - ggplot2
-    - dplyr
-    - tidyr
-    - topGO
+    - ggplot2 3.5.1
+    - dplyr 1.1.4
+    - tidyr 1.3.1
+    - topGO 2.54.0
 - **Miniconda**: latest version
 - **pip**: latest version
 
