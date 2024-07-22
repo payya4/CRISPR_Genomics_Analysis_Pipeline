@@ -111,9 +111,45 @@ Lists the scripts used and where to find them. Links are provided to locate the 
 - **CRISPR Genomes**: `annotate_genomes_crispr.sh`
 - **Non-CRISPR Genomes**: `annotate_genomes_noncrispr.sh`
 
-#### Pan-genome Analysis with Roary
+### Pan-Genome Analysis with Roary
 
-- **Script**: `run_roary.sh`
+#### Script Used
+- **Roary Script**: `run_roary.sh`
+
+#### Parameters and Justification
+1. **Identity Threshold**: 25%
+   - The identity threshold was set to 25% to allow for the inclusion of more diverse genes, acknowledging the high genetic variability among the strains.
+
+2. **MCL Inflation Value (IV)**: 1.4
+   - An IV of 1.4 was chosen after evaluating multiple IV values (1.3, 1.4, and 1.5). This value provided a balance between sensitivity and specificity in detecting significant gene associations.
+   - Higher IV values like 1.5 were too stringent and resulted in fewer core genes, while lower IV values like 1.3 were less specific.
+
+3. **Exclusion of Archaea Strains**
+   - Certain archaea strains were excluded from the analysis because their genetic divergence was significantly affecting the results, resulting in an unrealistically low number of core genes.
+   - Excluded Strains:
+     - Acidianus ambivalens
+     - Acidianus brierleyi
+     - Acidianus hospitalis
+     - Acidianus manzaensis
+     - Acidianus sulfidivorans
+
+#### Results Overview
+- The use of a 25% identity threshold and an IV of 1.4 yielded a more realistic distribution of core, soft core, shell, and cloud genes.
+- **Statistics for the dataset with IV 1.4:**
+  - Core genes: 41
+  - Soft core genes: 22
+  - Shell genes: 3373
+  - Cloud genes: 113930
+  - Total genes: 117366
+
+#### Reasoning for Parameter Choices
+- **High Genetic Diversity**: The strains in the study were highly diverse, which necessitated a lower identity threshold and the exclusion of highly divergent strains (archaea) to get meaningful core genome results.
+- **Balanced Sensitivity and Specificity**: The chosen IV of 1.4 provided the best balance between detecting significant gene associations and avoiding false positives.
+
+#### Running the Analysis
+- Ensure all GFF files from Prokka are prepared and stored in the specified directory.
+- Run the script `run_roary.sh` to perform the pan-genome analysis with the chosen parameters.
+
 
 #### Genome-wide Association Studies with Scoary
 
