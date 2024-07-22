@@ -259,7 +259,94 @@ After running eggNOG-mapper, use the `extract_cog_annotations.py` and `extract_g
 
 ## Visualization
 
--Use the `roary_bar_chart.R` script to make the graph in Figure 1.
+### Figure 1: Distribution of Gene Categories
+Use the `roary_bar_chart.R` script to make the graph in Figure 1. This script generates a bar chart showing the distribution of gene categories (Core genes, Soft core genes, Shell genes, Cloud genes) with a log scale on the y-axis.
+
+**Dependencies**:
+- R
+- ggplot2
+- dplyr
+
+**Input**: 
+- None (data is hardcoded within the script)
+
+**Output**:
+- `gene_category_distribution.png`
+
+### Figure 2: Roary Accessory Binary Genes Tree
+Use the `plot_roary.py` script to make the graph in Figure 2. This script is part of the Roary plots package, which is developed and maintained by the EMBL-European Bioinformatics Institute.
+
+#### How to Use `plot_roary.py`
+
+**Dependencies**:
+- Python
+- matplotlib
+- pandas
+- seaborn
+
+**Input**:
+- `roary_25_1.4_1719619195/accessory_binary_genes.fa.newick`
+- `roary_25_1.4_1719619195/gene_presence_absence.csv`
+
+**Output**:
+- `accessory_binary_genes_tree.png`
+
+1. Download the script from the official repository:
+
+    ```sh
+    wget https://raw.githubusercontent.com/sanger-pathogens/Roary/master/contrib/roary_plots/roary_plots.py
+    ```
+
+2. Ensure you have the required dependencies installed:
+
+    ```sh
+    pip install matplotlib pandas seaborn
+    ```
+
+3. Run the script to generate the plots:
+
+    ```sh
+    python roary_plots.py roary_25_1.4_1719619195/accessory_binary_genes.fa.newick roary_25_1.4_1719619195/gene_presence_absence.csv
+    ```
+
+#### License and Attribution
+This script is distributed under the GNU General Public License v3.0. You can redistribute it and/or modify it under the terms of the GPL as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. The script is provided without any warranty; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+For any queries or permissions beyond the scope of the license, please contact the developers at <marco@ebi.ac.uk>.
+
+The original script and its documentation can be found [here](https://github.com/sanger-pathogens/Roary/blob/master/contrib/roary_plots/roary_plots.py).
+
+### Figures 3 and 4: COG Category Counts and Significant COG Categories
+Use the `cogs_graphs.R` script to make the graphs in Figures 3 and 4. These scripts generate bar charts for COG category counts and significant COG categories with adjusted p-values.
+
+**Dependencies**:
+- R
+- ggplot2
+- dplyr
+
+**Inputs**:
+- `~/Desktop/eggnog_output/gene2cog.map`
+- `~/Desktop/eggnog_output/significant_cogs_combined.csv`
+
+**Outputs**:
+- `~/Desktop/eggnog_output/cog_category_counts_filtered.png`
+- `~/Desktop/eggnog_output/significant_cog_categories_filtered.png`
+
+### Figure 5: Top GO Terms Enriched in Significant Genes
+Use the `go_graphs.R` script to make the graph in Figure 5. This script generates a bar chart of the top Gene Ontology (GO) terms enriched in significant genes, with custom labels for clarity.
+
+**Dependencies**:
+- R
+- ggplot2
+- dplyr
+
+**Input**:
+- `~/Desktop/go_enrichment_results.csv`
+
+**Output**:
+- `~/Desktop/top_go_terms_enriched.png`
+
+### Supplementary Figures
 
 
 
