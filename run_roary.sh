@@ -44,3 +44,5 @@ echo "Running Roary at 25% with MCL inflation value 1.3..."
 roary -p 16 -i 25 -iv 1.3 -f roary_25_1.3 $GFF_FILES
 
 echo "Roary 25% identity analysis completed."
+
+# Script fully made by Yasmine Alqanai.
