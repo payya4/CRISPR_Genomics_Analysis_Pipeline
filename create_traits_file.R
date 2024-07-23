@@ -15,6 +15,7 @@ df <- read_csv(csv_file)
 genome_names <- colnames(df)[15:length(colnames(df))]
 
 # List of specific names to check
+# List co-piloted by AI to expedite the process of listing this information.
 specific_names <- c("Acetobacter_aceti", "Acetobacter_ascendens", "Acetobacter_oryzifermentans",
                     "Acetobacter_persici", "Acetobacter_pomorum", "Achromobacter_denitrificans",
                     "Achromobacter_xylosoxidans", "Acidaminococcus_fermentans", "Acidaminococcus_intestini",
@@ -60,3 +61,5 @@ output_file <- '~/Desktop/traits_file.csv'
 write_csv(traits_df, output_file)
 
 cat("Genome traits have been saved to", output_file, "\n")
+
+# Script made by Yasmine Alqanai with the exception of the list commented declaring the use of AI.
