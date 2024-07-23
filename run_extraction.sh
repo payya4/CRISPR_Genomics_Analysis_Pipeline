@@ -19,3 +19,5 @@ conda activate gene_extraction_env
 
 # Run the Python script
 python /gpfs01/home/payya4/extract_gene_sequences.py
+
+# Script fully made by Yasmine Alqanai.
