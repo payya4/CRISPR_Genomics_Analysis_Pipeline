@@ -1,11 +1,11 @@
-# Group_5_Rotation_3
+# CRISPR_Genomics_Analysis
 Includes the code and steps to conduct this project 
 
 ## Contents of the Files
 ### Workflow_Timeline.md
 
 **Introduction:**
-- Provides a brief overview of the problem being addressed.
+- Provides a brief overview of the project.
   
 **Objectives:**
 - Outlines the goals of the analysis.
@@ -28,9 +28,6 @@ Includes the code and steps to conduct this project
 - Links to websites/github pages associated with the tools/software used
     - Links contain info on usage and installation
 
-# Software_and_Tools.md
-
-Provides usage and installation information for all tools and software used.
 
 # Credits and Acknowledgments
 
