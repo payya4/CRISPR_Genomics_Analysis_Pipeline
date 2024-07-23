@@ -83,12 +83,14 @@ Use CRISPRCasFinder to identify genomes with and without CRISPR systems.
 - **Script**: `annotate_genomes_crispr.sh`
 - **Input Files**: Genome FASTA files (.fna)
 - **Output Files**: Annotated GFF3 and FASTA files
-
+- **Declaration:** Script Co-piloted by AI
+  
 ### Non-CRISPR Genomes
 
 - **Script**: `annotate_genomes_noncrispr.sh`
 - **Input Files**: Genome FASTA files (.fna)
 - **Output Files**: Annotated GFF3 and FASTA files
+- **Declaration:** Script Co-piloted by AI
 
 ## Pan-Genome Analysis with Roary
 
@@ -206,9 +208,10 @@ The original script and its documentation can be found [here](https://github.com
 
 - **Scoary Script**: `run_scoary.sh`
 - **Traits File Creation**: `create_traits_file.R`
+- **Declaration:** `create_traits_file.R` script co-piloted by AI
 - **Input Files**: 
   - `gene_presence_absence.csv` from Roary
-  - `traits_file.csv` created with `create_traits_file.R`
+  - `traits_file.csv` created with `create_traits_file.R` 
 - **Output Files**: Scoary analysis results
 
 ### Traits File Creation
@@ -252,14 +255,6 @@ To perform the genome-wide association study with Scoary, use the `run_scoary.sh
    transeq -sequence /path/to/significant_genes_sequences.fasta -outseq /path/to/significant_genes_sequences_protein.fasta
 
 
-
-## Run eggNOG-mapper
-
-Use the `run_eggnog_mapper.sh` script to run eggNOG-mapper on the translated protein sequences. This script activates the necessary conda environment (`eggnog_env`) and runs eggNOG-mapper with the specified input and output directories.
-
-## Extract COG and GO Annotations
-
-After running eggNOG-mapper, use the `extract_cog_annotations.py` and `extract_go_annotations.py` scripts to extract COG and GO annotations from the eggNOG-mapper output. The SLURM batch script `run_extract_annotations.sh` is used to run the extraction scripts.
 # Gene Annotation and Enrichment Analysis Workflow
 
 ## Run eggNOG-mapper
@@ -315,11 +310,6 @@ In the combined analysis of CRISPR and non-CRISPR genes, two significant COG cat
 ## GO Enrichment Analysis
 
 Use topGO to perform GO enrichment analysis in R.
-
-### Conda Environment Activation
-
-- **Command**: `conda activate scoary_analysis`
-- **Description**: Activate the conda environment used for the analysis.
 
 ### Python Script to Correct `gene2go.map`
 
@@ -379,7 +369,7 @@ Use topGO to perform GO enrichment analysis in R.
 ### Supplementary Figure 1: Filtering and Visualization of Scoary Results
 
 **Dependencies**:
-- Python 3.11.3
+- Python 
 - pandas
 - R
 - dplyr
