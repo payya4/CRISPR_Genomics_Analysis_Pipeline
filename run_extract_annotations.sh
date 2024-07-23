@@ -18,3 +18,5 @@ conda activate eggnog_env
 # Run the Python scripts
 python /gpfs01/home/payya4/extract_cog_annotations.py
 python /gpfs01/home/payya4/extract_go_annotations.py
+
+# Script fully made by Yasmine Alqanai.
