@@ -16,3 +16,5 @@ with open(input_file, "r") as infile, open(go_output_file, "w") as outfile:
             if go_annotations and go_annotations != "-":
                 go_annotations = go_annotations.replace(',', ';')
                 outfile.write(f"{gene_id} {go_annotations}\n")
+
+# Script fully made by Yasmine Alqanai.
