@@ -11,3 +11,5 @@ filtered_df = df[~df['Gene'].str.startswith('group_')]
 
 # Save the filtered data to a new CSV file
 filtered_df.to_csv('~/Desktop/filtered_data_1.4_new.csv', index=False)
+
+# Script fully made by Yasmine Alqanai.
