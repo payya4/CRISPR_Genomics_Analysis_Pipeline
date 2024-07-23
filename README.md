@@ -31,4 +31,6 @@ Includes the code and steps to conduct this project
 
 # Credits and Acknowledgments
 
-Project conducted by Yasmine Alqanai, with guidance from supervisor James McInerney.
+-Project conducted by Yasmine Alqanai, with guidance from supervisor James McInerney.
+
+-I acknowledge the use of ChatGPT [ChatGPT Website](https://chatgpt.com/auth/login) to co-pilot some of the scripts used. More info can be found in the Workflow_Timeline.md file. The sections of code co-piloted by AI have been commented in the individual scripts.
