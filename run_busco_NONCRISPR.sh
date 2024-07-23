@@ -50,3 +50,5 @@ done
 
 # Deactivate conda environment
 conda deactivate
+
+# Script fully made by Yasmine Alqanai.
