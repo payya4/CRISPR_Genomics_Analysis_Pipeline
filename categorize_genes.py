@@ -62,3 +62,5 @@ with open(output_non_crispr_genes, 'w') as f:
 # Verify the output
 print(f"Number of significant CRISPR gene IDs collected: {len(crispr_ids)}")
 print(f"Number of significant non-CRISPR gene IDs collected: {len(non_crispr_ids)}")
+
+#Script fully made by Yasmine Alqanai 
