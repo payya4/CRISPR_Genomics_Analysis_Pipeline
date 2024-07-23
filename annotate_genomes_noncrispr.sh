@@ -18,6 +18,7 @@ source /gpfs01/home/payya4/miniconda3/etc/profile.d/conda.sh
 conda activate /gpfs01/home/payya4/miniconda3/envs/prokka_env  
 
 # Define an associative array to map organism names to their respective kingdom, genus, and species
+#List co-piloted by AI to expedite the process of listing this information 
 declare -A organism_info
 organism_info["Acetobacter_pasteurianus"]="Bacteria Enterobacter cloacae"
 organism_info["Acinetobacter_baumannii"]="Bacteria Haemophilus influenzae"
@@ -80,3 +81,5 @@ done
 
 # Deactivate conda
 conda deactivate
+
+#Script made by Yasmine Alqanai with the exception of the list commented declaring the use of AI.
