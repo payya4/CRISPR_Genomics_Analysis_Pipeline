@@ -17,3 +17,5 @@ conda activate eggnog_env
 
 # Run eggNOG-mapper
 emapper.py -i /gpfs01/home/payya4/significant_genes_sequences_protein.fasta -o /gpfs01/home/payya4/eggnog_output/eggnog_results --data_dir /gpfs01/home/payya4/eggnog-mapper/data
+
+# Script fully made by Yasmine Alqanai.
