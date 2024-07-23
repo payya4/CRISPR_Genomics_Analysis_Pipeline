@@ -36,10 +36,14 @@ Includes the code and steps to conduct this project
 - I acknowledge the use of ChatGPT [ChatGPT Website](https://chatgpt.com/auth/login) to co-pilot some of the scripts used. The sections of code co-piloted by AI have been commented in the individual scripts. 
 
 - Scripts that include sections of co-piloted code by AI include:
-  -annotate_genomes_crispr.sh
-  -annotate_genomes_noncrispr.sh
-  -create_traits_file.R
-  -visualize_go_enrichment.R (used to make Figure 5)
+  
+  -**annotate_genomes_crispr.sh**
+  
+  -**annotate_genomes_noncrispr.sh**
+  
+  -**create_traits_file.R**
+  
+  -**visualize_go_enrichment.R (used to make Figure 5)**
 
 
 
