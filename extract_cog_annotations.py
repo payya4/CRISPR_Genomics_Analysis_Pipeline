@@ -15,3 +15,5 @@ with open(input_file, "r") as infile, open(cog_output_file, "w") as outfile:
             cog_annotation = row[cog_index]
             if cog_annotation:
                 outfile.write(f"{gene_id} {cog_annotation}\n")
+
+# Script fully made by Yasmine Alqanai.
