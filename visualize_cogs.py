@@ -36,3 +36,5 @@ plt.ylabel('Adjusted p-value')
 plt.xticks(rotation=45)
 plt.savefig("Desktop/eggnog_output/significant_cog_categories_filtered.png")
 plt.show()
+
+# Script fully made by Yasmine Alqanai.
