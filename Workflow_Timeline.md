@@ -83,14 +83,14 @@ Use CRISPRCasFinder to identify genomes with and without CRISPR systems.
 - **Script**: `annotate_genomes_crispr.sh`
 - **Input Files**: Genome FASTA files (.fna)
 - **Output Files**: Annotated GFF3 and FASTA files
-- **Declaration:** Script Co-piloted by AI
+- **Declaration:** Script co-piloted by AI
   
 ### Non-CRISPR Genomes
 
 - **Script**: `annotate_genomes_noncrispr.sh`
 - **Input Files**: Genome FASTA files (.fna)
 - **Output Files**: Annotated GFF3 and FASTA files
-- **Declaration:** Script Co-piloted by AI
+- **Declaration:** Script co-piloted by AI
 
 ## Pan-Genome Analysis with Roary
 
@@ -354,6 +354,7 @@ Use topGO to perform GO enrichment analysis in R.
 - `~/Desktop/top_go_terms_enriched.png`
 
 - **Script**: `visualize_go_enrichment.R`
+- **Declaration:** Script co-piloted by AI
 - **Description**: This script generates a bar chart of the top GO terms enriched in significant genes using ggplot2.
 
 ## Notes
