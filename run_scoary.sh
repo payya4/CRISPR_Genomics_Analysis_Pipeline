@@ -27,3 +27,6 @@ scoary -g $roary_output/gene_presence_absence.csv -t $traits_file -o $output_dir
 
 # Deactivate conda environment
 conda deactivate
+
+
+# Script fully made by Yasmine Alqanai.
