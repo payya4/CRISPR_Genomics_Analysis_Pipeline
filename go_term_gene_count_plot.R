@@ -19,3 +19,5 @@ ggplot(grouped_genes_by_go, aes(x = reorder(Term, gene_count), y = gene_count)) 
        y = "Number of Genes") +
   theme(axis.text.y = element_text(size = 8),
         axis.title.y = element_blank())
+
+# Script fully made by Yasmine Alqanai.
