@@ -69,3 +69,5 @@ print(significant_cogs)
 
 # Save results to a file
 significant_cogs.to_csv('/gpfs01/home/payya4/eggnog_output/significant_cogs_combined.csv', index=False)
+
+# Script fully made by Yasmine Alqanai.
