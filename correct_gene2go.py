@@ -16,3 +16,5 @@ with open(gene2go_file, 'r') as infile, open(corrected_gene2go_file, 'w') as out
             print(f"Skipping malformed line: {line}")
 
 print(f"Corrected gene2go map saved to: {corrected_gene2go_file}")
+
+# Script fully made by Yasmine Alqanai. 
