@@ -6,7 +6,8 @@ This file provides details about the software, tools, and websites utilized in o
 
 ## Packages
 
-### R Packages:
+### **R** - Version 4.2.1
+- [R Project Website](https://www.r-project.org)
 
 - **ggplot2** - Version 3.5.1
   - [GitHub Repository](https://github.com/tidyverse/ggplot2?tab=readme-ov-file)
@@ -54,7 +55,7 @@ This file provides details about the software, tools, and websites utilized in o
 
 - **R** - Version 4.2.1
   - **Dependencies**: ggplot2, dplyr, tidyr, topGO
-  - [R Project Website](https://www.r-project.org)
+  
 
 
 
