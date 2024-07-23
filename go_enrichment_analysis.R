@@ -49,3 +49,5 @@ print(allRes)
 
 # Save results to a CSV file
 write.csv(allRes, file = "~/Desktop/go_enrichment_results.csv", row.names = FALSE)
+
+# Script fully made by Yasmine Alqanai.
