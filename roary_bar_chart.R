@@ -19,3 +19,5 @@ ggplot(gene_data, aes(x = category, y = count, fill = category)) +
   geom_text(aes(label = count), vjust = -0.3) +
   theme_minimal() +
   theme(plot.title = element_text(hjust = 0.5))
+
+# Script fully made by Yasmine Alqanai.
