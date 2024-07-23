@@ -31,60 +31,7 @@ sum(is.na(allRes$classicFisher))
 allRes <- allRes[!is.na(allRes$classicFisher),]
 
 # Dictionary of better labels for GO terms
-better_labels <- c(
-  "nucleic acid phosphodiester bond hydrolysis" = "Nucleic Acid Phosphodiester Bond Hydrolysis",
-  "purine ribonucleotide biosynthetic process" = "Purine Ribonucleotide Synthesis",
-  "nucleoside triphosphate metabolic process" = "Nucleoside Triphosphate Metabolism",
-  "nucleoside triphosphate biosynthetic process" = "Nucleoside Triphosphate Synthesis",
-  "purine nucleoside triphosphate metabolic process" = "Purine Nucleoside Triphosphate Metabolism",
-  "purine nucleoside triphosphate biosynthetic process" = "Purine Nucleoside Triphosphate Synthesis",
-  "ribonucleoside triphosphate metabolic process" = "Ribonucleoside Triphosphate Metabolism",
-  "ribonucleoside triphosphate biosynthetic process" = "Ribonucleoside Triphosphate Synthesis",
-  "purine ribonucleoside triphosphate metabolic process" = "Purine Ribonucleoside Triphosphate Metabolism",
-  "purine ribonucleoside triphosphate biosynthetic process" = "Purine Ribonucleoside Triphosphate Synthesis",
-  "pyruvate metabolic process" = "Pyruvate Metabolism",
-  "glycolytic process" = "Glycolysis",
-  "ATP biosynthetic process" = "ATP Synthesis",
-  "nucleoside diphosphate metabolic process" = "Nucleoside Diphosphate Metabolism",
-  "purine nucleoside diphosphate metabolic process" = "Purine Nucleoside Diphosphate Metabolism",
-  "purine ribonucleoside diphosphate metabolic process" = "Purine Ribonucleoside Diphosphate Metabolism",
-  "ribonucleoside diphosphate metabolic process" = "Ribonucleoside Diphosphate Metabolism",
-  "pyruvate biosynthetic process" = "Pyruvate Synthesis",
-  "ADP metabolic process" = "ADP Metabolism",
-  "ATP metabolic process" = "ATP Metabolism",
-  "monocarboxylic acid biosynthetic process" = "Monocarboxylic Acid Synthesis",
-  "generation of precursor metabolites and energy" = "Generation of Precursors & Energy",
-  "ribonucleotide biosynthetic process" = "Ribonucleotide Synthesis",
-  "ribose phosphate biosynthetic process" = "Ribose Phosphate Synthesis",
-  "glucose 6-phosphate metabolic process" = "Glucose 6-Phosphate Metabolism",
-  "positive regulation of biological process" = "Positive Regulation of Biological Processes",
-  "positive regulation of cellular process" = "Positive Regulation of Cellular Processes",
-  "sulfur compound catabolic process" = "Sulfur Catabolism",
-  "protein transport by the Sec complex" = "Protein Transport (Sec Complex)",
-  "organelle assembly" = "Organelle Assembly",
-  "non-membrane-bounded organelle assembly" = "Non-Membrane-Bounded Organelle Assembly",
-  "ribonucleotide metabolic process" = "Ribonucleotide Metabolism",
-  "ribose phosphate metabolic process" = "Ribose Phosphate Metabolism",
-  "cell cycle" = "Cell Cycle",
-  "cell cycle process" = "Cell Cycle Process",
-  "double-strand break repair" = "Double-Strand Break Repair",
-  "nucleotide catabolic process" = "Nucleotide Catabolism",
-  "organophosphate catabolic process" = "Organophosphate Catabolism",
-  "nucleoside phosphate catabolic process" = "Nucleoside Phosphate Catabolism",
-  "glucose metabolic process" = "Glucose Metabolism",
-  "hexose biosynthetic process" = "Hexose Synthesis",
-  "monosaccharide biosynthetic process" = "Monosaccharide Synthesis",
-  "purine ribonucleotide metabolic process" = "Purine Ribonucleotide Metabolism",
-  "gluconeogenesis" = "Gluconeogenesis",
-  "pentose-phosphate shunt" = "Pentose-Phosphate Shunt",
-  "NADP metabolic process" = "NADP Metabolism",
-  "NADPH regeneration" = "NADPH Regeneration",
-  "regulation of secondary metabolic process" = "Regulation of Secondary Metabolism",
-  "regulation of pentose-phosphate shunt" = "Regulation of Pentose-Phosphate Shunt",
-  "regulation of generation of precursor metabolites and energy" = "Regulation of Generation of Precursors"
-)
-
-# Replace the terms accurately
+# List co-piloted by AI to expedite the process of listing this information.
 allRes <- allRes %>%
   mutate(Term = case_when(
     Term == "nucleic acid phosphodiester bond hydroly..." ~ "Nucleic Acid Phosphodiester Bond Hydrolysis",
@@ -142,16 +89,18 @@ allRes <- allRes %>%
 
 # Bar chart of top GO terms with custom colors
 ggplot(allRes, aes(x=reorder(Term, -classicFisher), y=-log10(classicFisher))) +
-  geom_bar(stat="identity", fill="#87CEEB") +  # Set bar color to light blue
+  geom_bar(stat="identity", fill="#87CEEB") +  # Set bar color 
   coord_flip() +
   xlab("GO Term") +
   ylab("-log10(p-value)") +
   ggtitle("Top GO Terms Enriched in Significant Genes") +
   theme_minimal() +
   theme(
-    text = element_text(color = "black"),  # Set text color to black
-    axis.text = element_text(size=8, color = "black"),  # Set axis text color to black and reduce font size
+    text = element_text(color = "black"),  # Set text color 
+    axis.text = element_text(size=8, color = "black"),  # Set axis text color and size
     axis.text.y = element_text(hjust=1),  # Align text to be fully visible
     plot.title = element_text(hjust = 0.5),  # Center the plot title
     plot.margin = unit(c(1,1,1,2), "cm")  # Increase the margin on the left side
   )
+
+# Script made by Yasmine Alqanai with the exception of the list commented declaring the use of AI.
