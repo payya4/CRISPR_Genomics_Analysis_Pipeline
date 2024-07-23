@@ -25,32 +25,32 @@ Results such as:
 ## Tools and Packages
 
 ### Tools
-- **Miniconda** V24.5.0
-- **pip** V9.0.3
+- **Miniconda** Version 24.5.0
+- **pip** Version 9.0.3
 - **Terminal**: 
-  - **Bash**: V4.4.20
+  - **Bash**: Version 4.4.20
 
 ### Packages
-- **BUSCO** V5.7.1
-- **Prokka** V1.14.6
-- **Roary** V3.13
-- **Scoary** V1.6.16
-- **eggNOG-mapper** V2.1.12
-- **EMBOSS** V6.6
-- **Python** V3.11.3
+- **BUSCO** Version 5.7.1
+- **Prokka** Version 1.14.6
+- **Roary** Version 3.13
+- **Scoary** Version 1.6.16
+- **eggNOG-mapper** Version 2.1.12
+- **EMBOSS** Version 6.6
+- **Python** Version 3.11.3
   - **Packages**:
-    - **pandas** V1.1.5
-    - **biopython** V1.79
-    - **bcbio-gff** V0.7.1 
-    - **matplotlib** V3.9.0
-    - **SciPy** V1.10.1
-    - **NumPy** V1.24.4
-- **R** V4.3.1
+    - **pandas** Version 1.1.5
+    - **biopython** Version 1.79
+    - **bcbio-gff** Version 0.7.1 
+    - **matplotlib** Version 3.9.0
+    - **SciPy** Version 1.10.1
+    - **NumPy** Version 1.24.4
+- **R** Version 4.3.1
   - **Packages**:
-    - **ggplot2** V3.5.1
-    - **dplyr** V1.1.4
-    - **tidyr** V1.3.1
-    - **topGO** V2.54.0
+    - **ggplot2** Version 3.5.1
+    - **dplyr** Version 1.1.4
+    - **tidyr** Version 1.3.1
+    - **topGO** Version 2.54.0
 
 
 ### Script Files
