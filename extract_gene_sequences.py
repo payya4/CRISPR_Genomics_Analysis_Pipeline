@@ -71,3 +71,5 @@ with open(output_file, "w") as out_fasta:
 
 # Process all GFF files
 process_gff_files(gff_dir, [crispr_fna_dir, non_crispr_fna_dir])
+
+# Script fully made by Yasmine Alqanai.
