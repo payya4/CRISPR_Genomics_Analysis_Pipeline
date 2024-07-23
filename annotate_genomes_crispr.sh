@@ -139,4 +139,4 @@ done
 # Deactivate conda
 conda deactivate
 
-#script made by Yasmine Alqanai with the exception of the list commented declaring the use of AI.
+#Script made by Yasmine Alqanai with the exception of the list commented declaring the use of AI.
